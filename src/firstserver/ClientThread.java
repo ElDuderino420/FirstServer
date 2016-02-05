@@ -47,7 +47,7 @@ public class ClientThread extends Thread {
                 if (line.equals("#stop#") || line.equals("#STOP#")) {
                     stop = true;
                     pw.println("Stopping...");
-                    suck.close();
+                    
                 }
                 else if (line.startsWith("UPPER#")) {
                     pw.println(line.substring(line.indexOf("#")+1).toUpperCase());
@@ -85,6 +85,7 @@ public class ClientThread extends Thread {
                     if(line.substring(line.indexOf("#")+1).equals("bird")){
                         pw.println("fugl");
                     }
+                    pw.println("#NOT_FOUND");
                     
                 } else {
                     pw.println(line);
